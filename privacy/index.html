@@ -124,30 +124,43 @@
       <a class="brand" href="/"><span class="mark" aria-hidden="true">K</span> Kitab</a>
       <h1>Privacy Policy</h1>
       <p class="effective">Effective October 3, 2026</p>
-      <p class="lede">Kitab is a local-first reader. You can read without an account. Optional Kitab Pro sync connects to your Google account and stores the data you choose to sync in your private Google Drive application-data folder. Kitab contains no ads or analytics and does not send your books or reading activity to the developer.</p>
+      <p class="lede">Kitab is a local-first reader. You can read without an account. Optional Kitab Pro sync stores the data you choose to sync in your private Google Drive application-data folder. Kitab contains no ads. Release versions use Google Firebase Analytics and Crashlytics to understand feature usage and diagnose crashes, as described below.</p>
     </header>
 
     <section>
       <h2>Information Kitab handles</h2>
-      <p>Kitab handles only the content and settings needed to provide its reading features:</p>
+      <p>Kitab handles the following content and settings to provide its reading features:</p>
       <ul>
         <li>Books, PDFs, comics, and images that you choose to open or import</li>
         <li>Publication metadata and generated cover images</li>
         <li>Reading position, progress, bookmarks, highlights, and excerpts connected to highlights</li>
         <li>Reading preferences such as theme, typography, layout, and brightness</li>
       </ul>
-      <p>This information is stored in Kitab's private app storage on your device. If you enable Google Drive sync, Kitab also stores your Google account email address and account identifier locally to identify the connected account. Kitab does not request your precise location, contacts, advertising identifiers, or payment-card details.</p>
+      <p>This information is stored in Kitab's private app storage on your device. If you enable Google Drive sync, Kitab also stores your Google account email address and account identifier locally to identify the connected account. Kitab does not request access to your precise location or contacts and does not collect the Android advertising identifier or payment-card details. Usage and diagnostic data collected in release versions is described below.</p>
     </section>
 
     <section>
       <h2>How information is used</h2>
       <p>Your imported content and reading data are used only to open publications, display your library, restore your position, and provide the reading features you choose to use. Kitab does not sell personal information or use it for advertising. If you enable sync, the selected data is transmitted directly to Google Drive to provide that feature; it is not sent to a developer-operated server.</p>
+      <p>Usage analytics helps the developer understand which features are used and where actions fail. Crash reports help identify and fix reliability problems.</p>
     </section>
 
     <section>
       <h2>Network access and third parties</h2>
-      <p>Local reading works offline. Kitab uses internet access for optional Google Drive sync, online read-aloud, and Google Play services. It has no developer-operated storage server, advertising service, or analytics service. Google processes account, Drive, and purchase information under its own policies.</p>
+      <p>Local reading works offline. Kitab uses internet access for optional Google Drive sync, online read-aloud, Google Play services, and Firebase Analytics and Crashlytics in release versions. Kitab has no developer-operated storage server or advertising service. Google processes account, Drive, purchase, analytics, and diagnostic information through its services. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase's privacy and security information</a>.</p>
       <p>Android and the store from which you installed Kitab may independently process information needed to distribute the app, provide operating-system features, or report platform diagnostics. That activity is controlled by those providers and their privacy policies, not by Kitab.</p>
+    </section>
+
+    <section id="analytics">
+      <h2>Usage analytics and crash reports</h2>
+      <p>Release versions of Kitab include Google Firebase Analytics and Crashlytics. Collection is enabled automatically, including when you read without connecting a Google account. Debug builds do not include either SDK. The current release configuration does not provide an in-app switch to disable this collection.</p>
+      <ul>
+        <li><strong>Feature usage:</strong> Kitab records import format and outcome, publication format when a book opens, selected theme/font/reading-mode categories, whether a bookmark or highlight was added, whether a search found results, and whether read-aloud started with Edge or Android TTS.</li>
+        <li><strong>Automatic analytics:</strong> Firebase also collects standard app events and session information, such as first launch, app activity, and supported in-app purchase events; app and device information; an app-instance identifier; and approximate geographic information. Kitab disables advertising-ID collection and advertising-personalization signals.</li>
+        <li><strong>Crash diagnostics:</strong> Crashlytics collects crash stack traces, relevant app state, device and operating-system information, installation and session identifiers, and diagnostic information. Analytics events may appear as breadcrumbs showing actions before a crash.</li>
+      </ul>
+      <p>Kitab's custom analytics events contain categorical values. They do not include book titles, authors, book IDs, file paths, reading positions, selected text, search queries, voice identifiers, or Google account identifiers. Kitab does not attach your Google account identity to analytics or crash reports. Crash reports contain technical exception information and are separate from these custom event payloads.</p>
+      <p>This data is transmitted to Google, and the developer can view analytics and crash reports through Google's consoles to improve Kitab. It is not used by Kitab for advertising. Google may process data on infrastructure outside your country. For further details, see <a href="https://support.google.com/analytics/answer/11593727">Google Analytics data collection</a> and <a href="https://firebase.google.com/docs/android/play-data-disclosure">Firebase Android data disclosures</a>.</p>
     </section>
 
     <section>
@@ -176,11 +189,12 @@
       <h2>Backups and retention</h2>
       <p>Depending on your device and Android backup settings, the operating system may include Kitab's local app data in a device or cloud backup associated with your device account. Kitab's developer does not operate or receive those backups.</p>
       <p>Your data remains on your device until you remove a publication, clear Kitab's storage, or uninstall the app, subject to any backups managed by your operating system. Removing a publication also removes its locally stored reading position and annotations from Kitab.</p>
+      <p>Analytics and crash information already transmitted to Google is retained separately from your local library, under the applicable service retention settings and policies. Deleting a book, disconnecting Drive, or uninstalling Kitab does not automatically erase those reports. Contact the developer using the address below for privacy or deletion requests; available deletion actions depend on the service and whether the relevant installation data can be identified.</p>
     </section>
 
     <section>
       <h2>Children's privacy</h2>
-      <p>Kitab does not use advertising or analytics and does not create advertising profiles. Optional Google Drive sync processes the connected account information and selected reading data described above.</p>
+      <p>Kitab contains no ads and does not use collected data to create advertising profiles. The data practices described in this policy, including automatic analytics and crash reporting in release versions, also apply when the app is used by children. Optional Google Drive sync processes the connected account information and selected reading data described above.</p>
     </section>
 
     <section>
